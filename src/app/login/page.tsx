@@ -1,9 +1,12 @@
 "use client";
+import Image from "next/image";
+// import localImage from "./../../../public/background.jpg";
 
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/navigation';
 import type { NextPage } from "next";
 import { useSession, signIn } from 'next-auth/react';
+import styles from "./login.module.css"
 
 const Login: NextPage=() => {
   const { data: session, status } = useSession();
@@ -23,12 +26,22 @@ const Login: NextPage=() => {
 	}
 
     return (
-      <div>
-        <h1>Welcome</h1>
+      <div className={styles.container}>
+        <div className={styles.loginBlock}>
+          <h1>Welcome</h1>
 
-        <button onClick={() => signIn('google', {}, { prompt: 'login' })}>
-          Googleでログイン
-        </button>
+          <button onClick={() => signIn('google', {}, { prompt: 'login' })}>
+            Login with Google
+          </button>
+
+          <button>
+            Login with X
+          </button>
+        </div>
+
+        <div className={styles.background}>
+
+        </div>
       </div>
     )
 }
