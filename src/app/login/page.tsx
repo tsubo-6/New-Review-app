@@ -1,32 +1,36 @@
-import React from 'react'
+"use client";
+
+import React, { useEffect } from 'react'
+import { useRouter } from 'next/navigation';
 import type { NextPage } from "next";
+import { useSession, signIn } from 'next-auth/react';
 
 const Login: NextPage=() => {
-  return (
-    <div>
-      <h1>Welcome</h1>
-      <div className="formField">
-        <label>Mail Address : </label>
-          <input
-            type="email"
-            placeholder="メールアドレス"
-            name="email"
-            required
-          />
-      </div>
+  const { data: session, status } = useSession();
+  const router = useRouter();
 
-      <div className="formField">
-        <label>Password : </label>
-          <input
-            type="password"
-            placeholder="パスワード"
-            name="password"
-            required
-          />
+  useEffect(() => {
+    // ログインが成功したら、sessionが存在しstatusが"authenticated"になります
+    if (status === 'authenticated') {
+      // ログイン成功時の処理をここに追加
+      // 例: ログイン後にメイン画面にリダイレクト
+      router.push('/main');
+    }
+  }, [status, router]);
+
+  if (status === 'loading') {
+		return <div>Loading...</div>;
+	}
+
+    return (
+      <div>
+        <h1>Welcome</h1>
+
+        <button onClick={() => signIn('google', {}, { prompt: 'login' })}>
+          Googleでログイン
+        </button>
       </div>
-      <button className="loginButton">Login</button>
-    </div>
-  )
+    )
 }
 
 export default Login
