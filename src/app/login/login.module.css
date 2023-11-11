@@ -1,0 +1,31 @@
+.container{
+  height:1280px;
+  background-size: cover;
+  background-image: url("/background3.jpg");
+  background-repeat:no-repeat;
+}
+
+.loginBlock{
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+
+  position: absolute;
+  /* 位置指定 */
+  top: 50%;
+  /* 親要素の半分下にずらす */
+  left: 50%;
+  /* 親要素の半分右にずらす */
+  transform: translateY(-50%) translateX(-50%);
+  /* 要素自体の半分、上と左にずらす */
+}
+
+.loginBlock button{
+  margin:6px;
+  height:30px;
+  font-size:18px;
+}
+
+.loginBlock h1 {
+  font-size:48px;
+}
