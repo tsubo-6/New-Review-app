@@ -11,3 +11,12 @@
     /* 親要素の半分右にずらす */
     transform: translateY(-50%) translateX(-50%);
 }
+
+.mainBlock h1{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.mainBlock h3 {
+  color: rgb(110, 109, 105);
+  font-family: 'Noto Sans JP', sans-serif;
+}
