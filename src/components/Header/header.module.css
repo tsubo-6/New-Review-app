@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+.title{
+  margin-top:6px;
+  margin-left: 12px;
+  color: rgb(242, 245, 240);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.subtitle{
+  margin-left: 12px;
+  color:rgb(110,109,105);
+  font-family: 'Noto Sans JP', sans-serif;
+}

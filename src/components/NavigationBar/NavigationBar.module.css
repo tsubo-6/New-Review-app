@@ -1,0 +1,18 @@
+.navComponents{
+  display: flex;
+  color: rgb(244, 246, 243);
+  font-family: 'Noto Sans JP', sans-serif;
+  margin-top:12px;
+}
+
+.navComponents h4 {
+  margin:12px;
+  padding-left:10px;
+  padding-right: 10px;
+  border:1px solid rgba(110, 109, 105, 0.7);;
+}
+
+.layout{
+  display: inline-flex;
+  vertical-align: middle;
+}
