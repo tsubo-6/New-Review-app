@@ -8,3 +8,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## 1.Login
 
 ![Alt text](public/readme1.png)
+
+## 2.Main page
+![Alt text](public/readme2.png)
