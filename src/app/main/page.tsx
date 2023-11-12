@@ -4,6 +4,9 @@ import React, { useEffect } from 'react'
 import { signOut } from 'next-auth/react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import Header from "@/components/Header/Header";
+import NavigationBar from "@/components/NavigationBar/NavigationBar";
+import styles from "./main.module.css";
 
 const Main: NextPage=() => {
 	const router = useRouter();
@@ -18,14 +21,18 @@ const Main: NextPage=() => {
 
 	if(status === 'authenticated'){
 		return(
-			<div>
-				<p>セッションの期限：{session?.expires}</p>
-				<p>ようこそ、{session.user?.name}さん</p>
-
-				<div>
-					<button onClick={() => signOut()}>LogOut</button>
+			<>
+				<Header/>
+				<NavigationBar/>
+				{/* <p>セッションの期限：{session?.expires}</p> */}
+				{/* <p>ようこそ、{session.user?.name}さん</p> */}
+				<div className={styles.mainBlock}>
+					<h1>No Posts...</h1>
+					<div>
+						<button onClick={() => signOut()}>LogOut</button>
+					</div>
 				</div>
-			</div>
+			</>
 		)
 	}
 }
