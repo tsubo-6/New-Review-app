@@ -10,12 +10,17 @@ import styles from "./main.module.css";
 const Main: NextPage=() => {
 	const router = useRouter();
   const { data: session, status } = useSession();
+	const username = session?.user.name;
+	const email = session?.user.email;
 
 	// 未認証の場合はログインページにリダイレクト
   useEffect(() => {
     if (status !== 'authenticated') {
       router.push("/login");
     }
+		console.log(username);
+		console.log(email);
+
   }, [status, router]);
 
 	if(status === 'authenticated'){
