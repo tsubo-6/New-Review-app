@@ -1,4 +1,3 @@
-import Header from '@/app/components/Header/Header'
 import React, { useEffect,useState }  from 'react'
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
@@ -25,8 +24,6 @@ function PostReview() {
 
   return (
     <>
-      <Header/>
-
       <div className={styles.container}>
         <div className={styles.formTop}>
           <h1>Post Review </h1>
