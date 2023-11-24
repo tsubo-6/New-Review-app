@@ -1,4 +1,3 @@
-import Header from '@/app/components/Header/Header'
 import React, { useEffect,useState }  from 'react'
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
@@ -17,6 +16,11 @@ function PostReview() {
     console.log(`React Stars Rating value is ${value}`);
   };
 
+  const onChangeSpicy = (value:number) => {
+    setValue(value);
+    console.log(`React Stars Rating value is ${value}`);
+  };
+
   useEffect(() => {
     if (status !== 'authenticated') {
       router.push('/login');
@@ -25,8 +29,6 @@ function PostReview() {
 
   return (
     <>
-      <Header/>
-
       <div className={styles.container}>
         <div className={styles.formTop}>
           <h1>Post Review </h1>
@@ -39,6 +41,8 @@ function PostReview() {
             <input type="text"/>
             <label>Rating</label>
             <ReactStarsRating onChange={onChange} value={value}/>
+            <label>Spicy</label>
+            <ReactStarsRating onChangeSpicy={onChange} value={value}/>
             <label>Picture</label>
             <input type="file"/>
             <label>Review</label>
