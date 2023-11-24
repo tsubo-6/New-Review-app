@@ -1,0 +1,67 @@
+.review{
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a ;
+}
+
+.review label{
+  margin:8px;
+  font-size: 24px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.review input {
+  margin-top: 8px;
+  margin-left:12px;
+  margin-right:12px;
+  width:75%;
+  font-size: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.review textarea {
+  margin: 8px;
+  height:240px;
+  font-size: 20px;
+  resize: none;
+}
+
+.formTop {
+  height: 180px;
+  background-size: cover;
+  background-image: url("/form-background.png");
+  background-repeat: no-repeat;
+  color: rgb(244, 246, 243);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.formTop h1{
+  border-bottom: 0.5px solid white;
+  display: inline-block;
+  margin-top:10px;
+  margin-left:16px;
+  font-weight: bold;
+}
+
+.formTop h3 {
+  margin:16px;
+}
+
+.container {
+  max-width: 900px;
+  min-width: 760px;
+  margin:30px auto;
+}
+
+.submitButton {
+  text-align:right;
+}
+
+.submitButton button{
+  font-size: 16px;
+  height: 28px;
+  margin-top: 16px;
+  margin-right: 24px;
+  padding: 0 8px;
+  font-family: 'Noto Sans JP', sans-serif;
+}

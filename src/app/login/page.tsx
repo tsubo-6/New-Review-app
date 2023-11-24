@@ -17,7 +17,7 @@ const Login: NextPage=() => {
     if (status === 'authenticated') {
       // ログイン成功時の処理をここに追加
       // 例: ログイン後にメイン画面にリダイレクト
-      router.push('/main');
+      router.push('/main/all');
     }
   }, [status, router]);
 
