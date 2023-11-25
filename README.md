@@ -11,3 +11,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## 2.Main page
 ![Alt text](public/readme2.png)
+
+## 3.Post review
+![Alt text](public/readme3.png)

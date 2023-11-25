@@ -1,7 +1,7 @@
-import React, { useEffect,useState }  from 'react'
+import React, { useEffect,useState }  from 'react';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
-import styles from "./postReview.module.css"
+import styles from "./postReview.module.css";
 import ReactStarsRating from 'react-awesome-stars-rating';
 
 
@@ -39,6 +39,8 @@ function PostReview() {
           <div className={styles.review}>
             <label>Curry restaurant name</label>
             <input type="text"/>
+            <label>Location</label>
+            <input placeholder="e.g. 大阪府"></input>
             <label>Rating</label>
             <ReactStarsRating onChange={onChange} value={value}/>
             <label>Spicy</label>
